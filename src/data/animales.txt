@@ -1,0 +1,8 @@
+
+León,Selva,5 años,Carnívoro,Sano,África,Panthera leo
+Tigre,Sabana,8 años,Carnívoro,Sano,Asia,Panthera tigris
+Elefante,Sabana,25 años,Hervíboro,Sano,África,Loxodonta africana
+Pingüino,Antártida,10 años,Carnívoro,Sano,Antártida,Aptenodytes forsteri
+Cocodrilo,Pantano,12 años,Carnívoro,Sano,Australia,Crocodylus porosus
+Tiburón,Oceano,15 años,Carnívoro,Sano,Oceano,Carcharodon carcharias
+Rana,Selva,2 años,Insectívoro,Enfermo,Amazonas,Agalychnis callidryas
