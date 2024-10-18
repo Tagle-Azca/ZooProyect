@@ -1,6 +1,6 @@
 package animales;
 class Animales {
-    String nombrepropio;
+    String nombre;
     String Tipo;
     String habitatNatural;
     String edad;
@@ -9,8 +9,8 @@ class Animales {
     String paisOrigen;
     String especie;
 
-    public Animales(String nombrepropio, String Tipo, String habitat, String edad, String alimentacion, String salud, String paisOrigen, String especie) {
-        this.nombrepropio = nombrepropio;
+    public Animales(String nombre, String Tipo, String habitat, String edad, String alimentacion, String salud, String paisOrigen, String especie) {
+        this.nombre = nombre;
         this.Tipo = Tipo; 
         this.habitatNatural = habitat;
         this.edad = edad;
@@ -21,7 +21,7 @@ class Animales {
     }
 
     public void mostrarInfoAnimales() {
-        System.out.println("Nombre propio: " + nombrepropio);
+        System.out.println("Nombre propio: " + nombre);
         System.out.println("Tipo : " + Tipo);
         System.out.println("Especie: " + especie);
         System.out.println("Edad: " + edad);
