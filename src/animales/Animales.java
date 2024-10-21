@@ -1,10 +1,14 @@
 package animales;
 
+import java.util.Random;
+import java.util.UUID; // nota para que ni se me olvide UUID significa
+//identificador único universal
 enum EstadoAnimal {
     HAMBRIENTO, COMIENDO, ALIMENTADO, ENFERMO, SALUDABLE, TRATADO;
 }
 
 public class Animales {
+    private String id;
     private String nombre;
     private String tipo;
     private String habitat;
@@ -15,9 +19,11 @@ public class Animales {
     private String especie;
     private EstadoAnimal estado;
 
+    // Constructor
     public Animales(String nombre, String tipo, String habitat,
                     String edad, String alimentacion, String salud,
-                    String paisOrigen, String especie, EstadoAnimal estado) {
+                    String paisOrigen, String especie) {
+        this.id = UUID.randomUUID().toString();
         this.nombre = nombre;
         this.tipo = tipo;
         this.habitat = habitat;
@@ -26,7 +32,28 @@ public class Animales {
         this.salud = salud;
         this.paisOrigen = paisOrigen;
         this.especie = especie;
-        this.estado = estado;
+        this.estado = generarEstadoAleatorio();  
+    }
+
+    private EstadoAnimal generarEstadoAleatorio() {
+        Random random = new Random();
+        int randomEstado = random.nextInt(5); 
+        switch (randomEstado) {
+            case 0:
+                return EstadoAnimal.HAMBRIENTO;
+            case 1:
+                return EstadoAnimal.COMIENDO;
+            case 2:
+                return EstadoAnimal.ENFERMO;
+            case 3:
+                return EstadoAnimal.SALUDABLE;
+            default:
+                return EstadoAnimal.TRATADO;
+        }
+    }
+
+    public String getId() {
+        return id;
     }
 
     public String getNombre() {
@@ -102,6 +129,7 @@ public class Animales {
     }
 
     public void mostrarInfoAnimales() {
+        System.out.println("ID: " + id);
         System.out.println("Nombre propio: " + nombre);
         System.out.println("Tipo: " + tipo);
         System.out.println("Especie: " + especie);
